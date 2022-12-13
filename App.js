@@ -1,12 +1,6 @@
-import {
-  View,
-  Text,
-  StatusBar,
-  SafeAreaView,
-  StyleSheet,
-  Image,
-} from 'react-native';
 import React from 'react';
+import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
+import LogoGanin from './assets/img/ganin_logo.svg';
 
 const App = () => {
   const handlePress = () => console.log('pressed');
@@ -21,10 +15,7 @@ const App = () => {
           onPress={handlePress}>
           Crazy App that will keep our mind sane.
         </Text>
-        <Image
-          source={require('./assets/img/ganin_logo.svg')}
-          style={styles.logo_image}
-        />
+        <LogoGanin width="100" height="100" />
         <StatusBar style="auto" />
       </SafeAreaView>
     </>
