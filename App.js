@@ -1,38 +1,63 @@
-import {View, Text, StatusBar, SafeAreaView, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  StatusBar,
+  SafeAreaView,
+  StyleSheet,
+  Image,
+} from 'react-native';
 import React from 'react';
 
 const App = () => {
   const handlePress = () => console.log('pressed');
-  // const 
+  // const
   return (
-    <SafeAreaView styles={styles.container}>
-      <Text numberOfLines={1} style={styles.centeredText} onPress={handlePress}>
-        Crazy App that will keep our mind sane. Magna sit aliqua anim officia
-        dolor velit cillum aute id culpa commodo in ipsum. Ullamco eiusmod
-        aliqua anim magna eu cillum. Dolore labore enim ex duis aliquip veniam
-        cillum officia nulla deserunt id consectetur. Enim deserunt mollit
-        fugiat consectetur ut sint ea minim quis Lorem Lorem exercitation velit.
-        Ea adipisicing eiusmod anim exercitation do culpa officia eu Lorem.
-        Laboris duis est laboris labore sunt et cupidatat ad fugiat anim et
-        eiusmod sunt eu. Minim nostrud non enim eu ea minim cillum cillum
-        excepteur.
-      </Text>
-      <StatusBar style="auto" />
-    </SafeAreaView>
+    <>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.box}></View>
+        <Text
+          numberOfLines={1}
+          style={styles.centeredText}
+          onPress={handlePress}>
+          Crazy App that will keep our mind sane.
+        </Text>
+        <Image
+          source={require('./assets/img/ganin_logo.svg')}
+          style={styles.logo_image}
+        />
+        <StatusBar style="auto" />
+      </SafeAreaView>
+    </>
   );
 };
 
 export default App;
 
 const styles = StyleSheet.create({
+  safeContainer: {
+    flex: 1,
+  },
+  box: {
+    height: 100,
+    width: 100,
+    backgroundColor: 'red',
+  },
   container: {
-    flexGrow: 1,
+    flex: 1,
+    // lineHight: '100%',
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   centeredText: {
+    // flex: 1,
     alignSelf: 'center',
+    // justifySelf: 'center'
+  },
+  logo_image: {
+    height: 200,
+    width: 200,
+    backgroundColor: 'red',
   },
 });
 
